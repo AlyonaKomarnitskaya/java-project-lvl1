@@ -1,3 +1,12 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/LenaKomarnitskaya/java-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/LenaKomarnitskaya/java-project-lvl1/actions)
 ![2022-07-16](https://user-images.githubusercontent.com/103958269/179375135-fe3b7efc-b58a-4877-9228-88b27b54a3bd.png)
+![2022-07-16 (1)](https://user-images.githubusercontent.com/103958269/179375145-a93208db-1bf8-49d3-8e86-c8ce702c7d36.png)
+![2022-07-16 (2)](https://user-images.githubusercontent.com/103958269/179375147-e83f1ce8-2ad6-44b9-9f31-c32660f22529.png)
+![2022-07-16 (3)](https://user-images.githubusercontent.com/103958269/179375150-409c4f88-4b84-4158-95e4-3c0b01c21783.png)
+![2022-07-16 (4)](https://user-images.githubusercontent.com/103958269/179375151-da418d64-4430-4532-a815-90cc25c81dba.png)
+![2022-07-16 (5)](https://user-images.githubusercontent.com/103958269/179375152-d9aa2c1d-cff2-4fb9-889f-4c55bfdc604e.png)
+![2022-07-16 (6)](https://user-images.githubusercontent.com/103958269/179375155-5797a23a-6d45-4c40-a6a6-4b7da122b6a1.png)
+![2022-07-16 (7)](https://user-images.githubusercontent.com/103958269/179375158-47c26008-5c6d-4437-864d-40aa2fac8915.png)
+![2022-07-16 (8)](https://user-images.githubusercontent.com/103958269/179375159-1b4dc2ba-9560-483c-ad9c-2d5d02c52da9.png)
+![2022-07-16 (9)](https://user-images.githubusercontent.com/103958269/179375162-489288c8-53b4-4b44-bdfd-676df7f102a5.png)
