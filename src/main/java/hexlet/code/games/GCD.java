@@ -12,13 +12,14 @@ public class GCD implements Game {
         int randomNum1 = (int) (Math.random() * convert);
         int randomNum2 = (int) (Math.random() * convert);
 
-        int gcd = 1;
-        for (int i = 1; i <= randomNum1 && i <= randomNum2; i++) {
-            if (randomNum1 % i == 0 && randomNum2 % i == 0) {
-                gcd = i;
+        var min = Math.min(randomNum2, randomNum1);
+        var newGCD = 0;
+        for (var gcd = min; gcd > 0; i--) {
+            if (randomNum1 % gcd == 0 && randomNum2 % gcd == 0) {
+                newGCD = gcd;
             }
         }
-        return new String[] {randomNum1 + " " + randomNum2, String.valueOf(gcd)};
+        return new String[] {randomNum1 + " " + randomNum2, String.valueOf(newGCD)};
     }
     public static void game() {
         Game game;
