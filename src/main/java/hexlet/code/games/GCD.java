@@ -14,7 +14,7 @@ public class GCD implements Game {
 
         var min = Math.min(randomNum2, randomNum1);
         var newGCD = 0;
-        for (var gcd = min; gcd > 0; i--) {
+        for (var gcd = min; gcd > 0; gcd--) {
             if (randomNum1 % gcd == 0 && randomNum2 % gcd == 0) {
                 newGCD = gcd;
             }
