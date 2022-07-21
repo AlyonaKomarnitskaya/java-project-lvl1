@@ -17,6 +17,9 @@ public class Prime implements Game {
         if (randomNum < 2) {
             answer = "no";
         }
+        if (randomNum == 0) {
+            answer = "no";
+        }
         for (int i = 1; i <= randomNum; i++) {
             if (randomNum % i == 0)
                 count += 1;
