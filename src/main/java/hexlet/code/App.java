@@ -8,11 +8,6 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        int evenGame = 2;
-        int calcGame = 3;
-        int gcdGame = 4;
-        int progressionGame = 5;
-        int primeGame = 6;
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
@@ -24,23 +19,26 @@ public class App {
         System.out.println("Your choice: ");
         Scanner scanner = new Scanner(System.in);
         int chosenGame = scanner.nextInt();
-        if (chosenGame == 1) {
-            Cli.greetUser();
-        }
-        if (chosenGame == evenGame) {
-            Even.game();
-        }
-        if (chosenGame == calcGame) {
-            Calc.game();
-        }
-        if (chosenGame == gcdGame) {
-            GCD.game();
-        }
-        if (chosenGame == progressionGame) {
-            Progression.game();
-        }
-        if (chosenGame == primeGame) {
-            Prime.game();
+        switch (chosenGame) {
+            case "1":
+                Cli.greetUser();
+                break;
+            case "2":
+                Even.game();
+                break;
+            case "3":
+                Calc.game();
+                break;
+            case "4":
+                GCD.game();
+                break;
+            case "5":
+                Progression.game();
+                break;
+            case "6":
+                Prime.game();
+                break;
+
         }
     }
 }
