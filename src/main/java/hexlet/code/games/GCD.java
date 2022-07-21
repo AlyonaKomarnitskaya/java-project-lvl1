@@ -16,7 +16,7 @@ public class GCD implements Game {
         var newGCD = 0;
         for (var gcd = min; gcd > 0; gcd--) {
             if (randomNum1 % gcd == 0 && randomNum2 % gcd == 0) {
-                newGCD = gcd;
+                newGCD += gcd;
             }
         }
         return new String[] {randomNum1 + " " + randomNum2, String.valueOf(newGCD)};
