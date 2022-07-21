@@ -11,13 +11,13 @@ public final class Prime implements Game {
     public String[] questionAndAnswer() {
         final int convert = 100;
         int randomNum = (int) (Math.random() * convert);
-        String answer;
-        int count = 0;
 
         if ((randomNum == 0)  || (randomNum == 1)) {
             return new String[] {String.valueOf(randomNum), "yes"};
         }
 
+        String answer;
+        int count = 0;
         for (int i = 1; i <= randomNum; i++) {
             if (randomNum % i == 0) {
                 count += 1;
