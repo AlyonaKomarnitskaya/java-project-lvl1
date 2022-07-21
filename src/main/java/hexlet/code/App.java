@@ -35,7 +35,7 @@ public class App {
             case "5":
                 Progression.game();
                 break;
-            default: "6":
+            default:
                 Prime.game();
                 break;
 
