@@ -14,11 +14,9 @@ public final class Prime implements Game {
         String answer;
         int count = 0;
 
-        if (randomNum < 2) {
-            answer = "no";
+        if ((randomNum == 0)  || (randomNum == 1)) {
+            return new String[] {String.valueOf(randomNum), "yes"};
         }
-        if (randomNum == 0) {
-            answer = "yes";
         }
         for (int i = 1; i <= randomNum; i++) {
             if (randomNum % i == 0) {
