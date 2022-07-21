@@ -18,7 +18,7 @@ public class App {
         System.out.println("0 - Exit");
         System.out.println("Your choice: ");
         Scanner scanner = new Scanner(System.in);
-        int chosenGame = scanner.nextInt();
+        String chosenGame = scanner.nextLine();
         switch (chosenGame) {
             case "1":
                 Cli.greetUser();
