@@ -2,14 +2,14 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-public class Prime implements Game {
+public final class Prime implements Game {
 
     public String description() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
     public String[] questionAndAnswer() {
-        int convert = 100;
+        final int convert = 100;
         int randomNum = (int) (Math.random() * convert);
         String answer;
         int count = 0;
@@ -21,8 +21,9 @@ public class Prime implements Game {
             answer = "yes";
         }
         for (int i = 1; i <= randomNum; i++) {
-            if (randomNum % i == 0)
+            if (randomNum % i == 0) {
                 count += 1;
+            }
         }
         if (count > 2) {
             answer = "no";

@@ -3,16 +3,17 @@ import hexlet.code.Cli;
 import hexlet.code.Engine;
 import java.util.Random;
 
-public class Progression implements Game {
+public final class Progression implements Game {
 
     public String description() {
         return "What number is missing in the progression?";
     }
     public String[] questionAndAnswer() {
-        int convert = 25;
+        final int convert = 25;
+        final int convertForDifference = 10;
         int startNum = (int) (Math.random() * convert);
-        int difference = (int) (Math.random() * 10);
-        int length = 10;
+        int difference = (int) (Math.random() * convertForDifference);
+        final int length = 10;
         int answerPosition = new Random().nextInt(length);
         String answer = "";
         String[] progression = new String[length];

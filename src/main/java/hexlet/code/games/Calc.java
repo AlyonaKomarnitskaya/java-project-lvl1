@@ -3,7 +3,7 @@ import hexlet.code.Cli;
 import hexlet.code.Engine;
 import java.util.Random;
 
-public class Calc implements Game {
+public final class Calc implements Game {
     public String description() {
         return "What is the result of the expression?";
     }
@@ -15,7 +15,7 @@ public class Calc implements Game {
     }
 
     public String[] questionAndAnswer() {
-        int convert = 100;
+        final int convert = 100;
         int randomNum1 = (int) (Math.random() * convert);
         int randomNum2 = (int) (Math.random() * convert);
         char operator = randomOperator();
