@@ -1,13 +1,11 @@
 package hexlet.code.games;
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-public final class Even implements Game {
 
-    public String description() {
-        return "Answer 'yes' if number even otherwise answer 'no'.";
-    }
-    public String[] questionAndAnswer() {
+public final class Even {
+
+    static final String DESCRIPTION = "Answer 'yes' if number even otherwise answer 'no'.";
+    public static String[] getEvenData() {
         final int convert = 100;
         int randomNum = (int) (Math.random() * convert);
         String answer;
@@ -19,10 +17,11 @@ public final class Even implements Game {
         return new String[] {String.valueOf(randomNum), answer};
     }
 
-    public static void game() {
-        Game game;
-        game = new Even();
-        String name = Cli.greetUser();
-        Engine.runGame(game, name);
+    public static void runGame() {
+        String[][] questionAndAnswer = new String[Engine.ROUNDS_COUNT][];
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            questionAndAnswer[i] = getEvenData();
+        }
+        Engine.runGame(DESCRIPTION, questionAndAnswer);
     }
 }
