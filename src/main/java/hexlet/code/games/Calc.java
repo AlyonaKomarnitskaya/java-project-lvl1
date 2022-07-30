@@ -1,20 +1,16 @@
 package hexlet.code.games;
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 import java.util.Random;
 
-public final class Calc implements Game {
-    public String description() {
-        return "What is the result of the expression?";
-    }
-
+public final class Calc {
+    static final String DESCRIPTION = "What is the result of the expression?";
     public static char randomOperator() {
         char[] operators = {'*', '+', '-'};
         int operator = new Random().nextInt(operators.length);
         return operators[operator];
     }
 
-    public String[] questionAndAnswer() {
+    public static String[] getCalcData() {
         final int convert = 100;
         int randomNum1 = (int) (Math.random() * convert);
         int randomNum2 = (int) (Math.random() * convert);
@@ -34,11 +30,13 @@ public final class Calc implements Game {
                 break;
         }
         return new String[] {randomNum1 + " " + operator + " " + randomNum2, String.valueOf(result)};
+
     }
-    public static void game() {
-        Game game;
-        game = new Calc();
-        String name = Cli.greetUser();
-        Engine.runGame(game, name);
+    public static void runGame() {
+        String[][] questionAndAnswer = new String[Engine.ROUNDS_COUNT][];
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            questionAndAnswer[i] = getCalcData();
+        }
+        Engine.runGame(DESCRIPTION, questionAndAnswer);
     }
 }
