@@ -1,31 +1,32 @@
 package hexlet.code;
-import hexlet.code.games.Game;
 import java.util.Scanner;
 
 public class Engine {
-    public static void runGame(Game game, String name) {
-        System.out.println(game.description());
-        boolean isRight = true;
-        final int reiteration = 3;
-        for (int i = 0; i < reiteration; i++) {
-            String[] questionAnswer = game.questionAndAnswer();
-            System.out.println("Question: " + questionAnswer[0]);
+    public static final int ROUNDS_COUNT = 3;
+    public static void runGame(String description, String[][] questionAndAnswer) {
+        System.out.println("Welcome to the Brain Games!");
+        System.out.println("May I have your name?");
+        Scanner scanner = new Scanner(System.in);
+        String userName = scanner.nextLine();
+        System.out.println("Hello, " + userName + "!");
+
+        System.out.println(description);
+
+        for (int i = 0; i < ROUNDS_COUNT; i++) {
+            System.out.println("Question: " + questionAndAnswer[i][0]);
             System.out.println("Your answer: ");
-            Scanner scanner = new Scanner(System.in);
             String answer = scanner.nextLine();
 
-            if (answer.equals(questionAnswer[1])) {
+            if (answer.equals(questionAndAnswer[i][1])) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "'" + " is wrong answer ;(. ");
-                System.out.print("Correct answer was " + "'" + questionAnswer[1] + "'.");
-                System.out.println("Let's try again, " + name + "!");
-                isRight = false;
-                break;
+                System.out.print("Correct answer was " + "'" + questionAndAnswer[i][1] + "'.");
+                System.out.println("Let's try again, " + userName + "!");
+                return;
             }
         }
-        if (isRight) {
-            System.out.println("Congratulations, " + name + "!");
-        }
+            System.out.println("Congratulations, " + userName + "!");
+
     }
 }
