@@ -1,14 +1,11 @@
 package hexlet.code.games;
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 import java.util.Random;
 
-public final class Progression implements Game {
+public final class Progression {
 
-    public String description() {
-        return "What number is missing in the progression?";
-    }
-    public String[] questionAndAnswer() {
+    static final String DESCRIPTION = "What number is missing in the progression?";
+    public static String[] getProgressionData() {
         final int convert = 25;
         final int convertForDifference = 10;
         int startNum = (int) (Math.random() * convert);
@@ -31,10 +28,11 @@ public final class Progression implements Game {
         }
         return new String[] {String.join(" ", progression), answer};
     }
-    public static void game() {
-        Game game;
-        game = new Progression();
-        String name = Cli.greetUser();
-        Engine.runGame(game, name);
+    public static void runGame() {
+        String[][] questionAndAnswer = new String[Engine.ROUNDS_COUNT][];
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            questionAndAnswer[i] = getProgressionData();
+        }
+        Engine.runGame(DESCRIPTION, questionAndAnswer);
     }
 }
