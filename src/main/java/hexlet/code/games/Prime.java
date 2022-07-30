@@ -1,14 +1,11 @@
 package hexlet.code.games;
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-public final class Prime implements Game {
+public final class Prime {
 
-    public String description() {
-        return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    }
+    static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-    public String[] questionAndAnswer() {
+    public static String[] getPrimeData() {
         final int convert = 100;
         int randomNum = (int) (Math.random() * convert);
 
@@ -30,10 +27,11 @@ public final class Prime implements Game {
         }
         return new String[] {String.valueOf(randomNum), answer};
     }
-    public static void game() {
-        Game game;
-        game = new Prime();
-        String name = Cli.greetUser();
-        Engine.runGame(game, name);
+    public static void runGame() {
+        String[][] questionAndAnswer = new String[Engine.ROUNDS_COUNT][];
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            questionAndAnswer[i] = getPrimeData();
+        }
+        Engine.runGame(DESCRIPTION, questionAndAnswer);
     }
 }
